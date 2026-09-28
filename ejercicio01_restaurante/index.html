@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <!-- Vinculación del archivo CSS -->
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/script.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1 class="titulo-restaurante">Menú & Pedidos</h1>
+
+        <!-- Contenedor dividido en dos columnas -->
+        <div class="formularios-grid">
+            <!-- Columna Izquierda: Comida -->
+            <div class="columna">
+                <h2>Comida</h2>
+                <div class="input-group">
+                    <input type="text" id="comida" placeholder="Ej. Hamburguesa, Pizza...">
+                    <button onclick="sumarComida()">Agregar</button>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Bebida -->
+            <div class="columna">
+                <h2>Bebida</h2>
+                <div class="input-group">
+                    <input type="text" id="bebida" placeholder="Ej. Jugo, Cerveza...">
+                    <button onclick="sumarBebida()">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección inferior centrada: Pedido y Total -->
+        <div class="seccion-pedidos">
+            <div class="resumen-box">
+                <h3>Tu Pedido</h3>
+                <div id="pedido" class="contenido-pedido"></div>
+            </div>
+
+            <div class="total-box">
+                <span class="label-total">Total a pagar:</span>
+                <span id="total" class="monto-total">0.00</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
