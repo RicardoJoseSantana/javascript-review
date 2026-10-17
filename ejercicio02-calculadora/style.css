@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbe2ef; /* Fondo exterior azul grisáceo suave */
+}
+
+/* Cuerpo principal de la calculadora */
+.calculator {
+    width: 340px;
+    background-color: #e6ecf5; /* Tono principal más amigable que el blanco puro */
+    padding: 30px 25px;
+    border-radius: 40px;
+    box-shadow: 15px 15px 30px rgba(166, 180, 200, 0.7), 
+                -15px -15px 30px rgba(255, 255, 255, 0.9);
+}
+
+/* Pantalla con efecto hundido (inset shadow) */
+.display-container {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: #dce3ed;
+    padding: 18px 20px;
+    box-shadow: inset 4px 4px 8px rgba(166, 180, 200, 0.7), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+#display {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #4a5568;
+    text-align: right;
+    outline: none;
+}
+
+/* Rejilla para los botones */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Estilo base de los botones */
+.btn {
+    height: 60px;
+    border-radius: 16px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease;
+}
+
+/* Efecto al presionar cualquier botón */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Botones numéricos (7, 8, 9, 4, 5, 6, 1, 2, 3, 0) */
+.btn-num {
+    background-color: #f0f4f9;
+    color: #334155;
+    box-shadow: 4px 4px 8px rgba(166, 180, 200, 0.6), 
+                -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.btn-num:hover {
+    background-color: #f8fafc;
+}
+
+/* Botones de operaciones (+, -, x, =, ÷) */
+.btn-op {
+    background-color: #475569;
+    color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(71, 85, 105, 0.4), 
+                -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.btn-op:hover {
+    background-color: #334155;
+}
+
+/* Botón Clear (C) */
+.btn-clear {
+    background-color: #dc2626;
+    color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(220, 38, 38, 0.4), 
+                -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.btn-clear:hover {
+    background-color: #b91c1c;
+}
